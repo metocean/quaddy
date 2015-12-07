@@ -1,0 +1,19 @@
+{
+  "name": "quaddy",
+  "version": "1.0.0",
+  "description": "Store, process and query a pre-allocated quadtree",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/metocean/quaddy.git"
+  },
+  "author": "Thomas Coats <t.coats@metocean.co.nz>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/metocean/quaddy/issues"
+  },
+  "homepage": "https://github.com/metocean/quaddy#readme"
+}
