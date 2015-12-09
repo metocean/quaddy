@@ -1,5 +1,5 @@
 # A quad tree is defined as a subdividing 2d plane
-# A single tile splits into four, each tile then spits into another four
+# A single tile splits into four, each tile then spits into another four, etc, etc.
 
 # z = the subdivision level
 # x, y = the coordinates of the tile in the level
@@ -37,11 +37,15 @@ module.exports =
     # Read a location from the quadtree, may be undefined
     get: (x, y, z) ->
       len = Math.pow 2, z
+      return null if z > zmax
+      return null if y * len + x >= levels[z].length
       levels[z][y * len + x]
 
     # Read if available or create if not available
     assert: (x, y, z) ->
       len = Math.pow 2, z
+      return null if z > zmax
+      return null if y * len + x >= levels[z].length
       if !levels[z][y * len + x]?
         levels[z][y * len + x] = {}
       levels[z][y * len + x]

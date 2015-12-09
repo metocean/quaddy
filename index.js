@@ -29,11 +29,23 @@ module.exports = {
       get: function(x, y, z) {
         var len;
         len = Math.pow(2, z);
+        if (z > zmax) {
+          return null;
+        }
+        if (y * len + x >= levels[z].length) {
+          return null;
+        }
         return levels[z][y * len + x];
       },
       assert: function(x, y, z) {
         var len;
         len = Math.pow(2, z);
+        if (z > zmax) {
+          return null;
+        }
+        if (y * len + x >= levels[z].length) {
+          return null;
+        }
         if (levels[z][y * len + x] == null) {
           levels[z][y * len + x] = {};
         }
