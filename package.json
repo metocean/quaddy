@@ -1,6 +1,6 @@
 {
   "name": "quaddy",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Store, process and query a pre-allocated quadtree",
   "main": "index.js",
   "scripts": {
